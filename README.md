@@ -13,6 +13,7 @@ One can use the wallet app to buy, sell or transfer SNL directly via the contrac
 
 | Symbol   | SNL                                                              |
 |----------|------------------------------------------------------------------|
+| Wallet   | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet)          |
 | Token    | Snail token aka "Satoshi Nakamoto Leverage"                      | 
 | Domain   | [slowsnail.eth](https://etherscan.io/address/slowsnail.eth)      |
 | Contract | 0x3f243F1A635b3E55249222dAB9529441f5A2d594                       |
@@ -65,10 +66,10 @@ However there is a plan for continuous effort of a new research and development 
 
 Part of the work will be financed from the R&D bounty that has been already minted in form of the initial supply. If you find it suitable to support these R&D efforts, then you can also donate to the following addresses:
 
+| Network  | Address                                    |
+|----------|--------------------------------------------|
 | Bitcoin  | 337nJFk8qP6dUUPnJ6Em1rFLSSwKM4rwAt         |
-|----------|--------------------------------------------|
 | Litecoin | MVRBAtJFR74nmshmxbKymUdd9k2241GS3U         |
-|----------|--------------------------------------------|
 | Ethereum | 0x6900ECFf4BF840c70ed3FA59571b2f46807BDf6a |
 
 Help is welcomed. Most of the code is open source (unless otherwise noted in files, also see the legal disclaimer below). Please make a fork or submit an issue. 
@@ -142,5 +143,4 @@ Make sure to encrypt your email messages for the following [PGP public key](pgpk
 The same key is used for signing git commits or files. Please use it to verify my PGP signatures.
 
 
-Yours,
 Takeshi Kodo
