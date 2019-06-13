@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Snail Token Dapp">
+    <meta name="author" content="Takeshi Kodo">
+    <title>Snail tokens 🐌</title>
+  </head>
+
+  <body class="text-center">
+
+    <div class="status-container row"> 
+      <div class="mb-3" style="width: 100%;">
+        <div class="alert alert-danger" role="alert">
+          <span id="status"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Snail tokens 🐌 <small class="text-muted">wallet v-</small><small class="text-muted" id="wallet-version"></small></h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Wallet</a>
+            <a class="nav-link" href="https://gitlab.com/takeshikodo/snl-wallet/paper.pdf">Paper</a>
+            <a class="nav-link" href="https://gitlab.com/takeshikodo/snl-wallet/">Gitlab</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Modal dialog frame to confirm deposit, withdraw and transfer -->
+      <div id="modalDialog" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Confirm</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main role="main" class="inner cover">
+        <div class="row">
+        <div class="col-md-6 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Contract Market</span>
+            <span class="badge badge-secondary badge-pill" id="date-placeholder"></span>
+          </h4>
+          <ul class="list-group mb-3">
+
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+              <h6 class="my-0">Your balance (ETH)</h6>
+              <div class="text-muted value-text badge badge-success" id="walletBalanceInEth"></div>
+              <div class="value-label">
+                <small>Readout from your ethereum wallet at <br><a href="" class="badge badge-success wallet-address-link"><span class="minorlabel" id="walletAddress"></span></a> 🔗</small>
+              </div>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+              <h6 class="my-0">Your balance (SNL)</h6>
+              <div class="text-muted value-text badge badge-success" id="walletBalanceInSnl"></div>
+              <div class="value-label">
+                <small>Readout from the smart contract address at <br><a href="https://etherscan.io/address/0x3f243F1A635b3E55249222dAB9529441f5A2d594" class="badge badge-success"><span class="minorlabel" id="contractAddress"></span></a> 🔗</small>
+              </div>
+              </div>
+            </li> 
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div class="text-info">
+              <h6 class="my-0">Total deposit (ETH)</h6>
+              <div class="text-muted value-text badge badge-info" id="totalDepositInEth"></div>
+              <div class="value-label">
+                <small>Value of the shared deposit in the smart contract</small>
+              </div>
+              </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div class="text-info">
+              <h6 class="my-0">Total supply (SNL)</h6>
+              <div class="text-muted value-text badge badge-info" id="totalSupplyOfSnl"></div>
+              <div class="value-label">
+                <small>Number of tokens in circulation</small>
+              </div>
+              </div>
+            </li>           
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+              <h6 class="my-0">Deposit of</h6>
+              <div class="text-muted value-text badge badge-success" id="depositPriceInEth"></div><small class="text-muted"> ETH</small>
+              <div class="value-label">
+                <small class="text-muted">will give you <br><span class="cnv-deposit-amount badge badge-success"></span> SNL</small>
+              </div>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+              <h6 class="my-0">Withdraw of</h6>
+              <div class="text-muted value-text badge badge-warning" id="withdrawPriceInSnl"></div><small class="text-muted"> SNL</small>
+              <div class="value-label">
+                <small class="text-muted">will give you<br><span class="cnv-withdraw-amount badge badge-warning"></span> ETH</small>
+              </div>
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+              <h6 class="my-0">Personal interest over </h6>
+              <div class="text-muted value-text badge badge-info" id="amountInSnl"></div><small class="text-muted"> SNL</small>
+              <div class="value-label">
+                <small class="text-muted">for your next operation today is<br><span class="cnv-interest badge badge-info"></span> SNL</small>
+              </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="input-group">
+            <div class="input-group-append">
+              <button id="recalculate" class="btn btn-secondary">Recalculate costs</button>
+            </div>
+            <input id="recalculate-value" type="text" class="form-control" placeholder="e.g. 3.1415926..a float, x 1e18">
+          </div>
+        </div>
+
+        <div class="col-md-6 order-md-1">
+          <h4 class="mb-3">Deposit ETH</h4>
+
+          <div class="row wallet-field">
+            <div class="col-md-12 mb-3">
+              <label for="deposit-amount">Amount</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">⟠</span>
+                </div>
+                <input type="text" class="form-control" id="deposit-amount" placeholder="e.g. 3.1415926..a float, x 1e18" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Specify deposit amount (required)
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn btn-success btn-lg btn-block" onclick="App.depositEth()">Buy SNL</button>
+          
+          <hr class="mb-4">
+
+          <h4 class="mb-3">Withdraw ETH</h4>
+
+          <div class="row wallet-field">
+            <div class="col-md-12 mb-3">
+              <label for="withdraw-amount">Amount</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="withdraw-amount" placeholder="e.g. 3.1415926..a float, x 1e18" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Specify withdraw amount (required)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-secondary btn-lg btn-block" onclick="App.withdrawEth()">Sell SNL</button>
+
+          <hr class="mb-4">
+
+          <h4 class="mb-3">Transfer SNL</h4>
+
+          <div class="row wallet-field">
+            <div class="col-md-12 mb-3">
+              <label for="transfer-address">Address</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">🏣</span>
+                </div>
+                <input type="text" class="form-control" id="transfer-address" placeholder="..wallet to send SNL to" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Send SNL to this wallet address (required)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row wallet-field">
+            <div class="col-md-12 mb-3">
+              <label for="transfer-amount">Amount</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" id="transfer-amount" placeholder="e.g. 3.1415926..a float, x 1e18" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  Specify transfer amount (required)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-info btn-lg btn-block" onclick="App.transferSnl()">Transfer SNL</button>
+
+        </div>
+      </div>
+
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Read the <a href="https://gitlab.com/takeshikodo/snl-wallet/paper.pdf">SNAIL paper</a> accompanied by the published  <a href="https://gitlab.com/takeshikodo/snl-wallet">source code</a></p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

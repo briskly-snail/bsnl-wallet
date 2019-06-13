@@ -1,0 +1,15 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Publishing wallet app..'
+  - if [[ -d public ]]; then rm -rf public/; fi
+  - if [[ ! -d public ]]; then mkdir public; fi
+  # Assume the app was already build, committed and git-signed..
+  - cp build/app.js public/ && cp build/index.html public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
