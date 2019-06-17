@@ -11,16 +11,16 @@ Simple mechanism mentioned above can be programmed to operate completely "in sil
 One can use the wallet app to buy, sell or transfer SNL directly via the contract, which is an extended version of the ERC20. 
 
 
-| Symbol   | SNL                                                              |
-|----------|------------------------------------------------------------------|
-| Paper    | [paper.pdf](https://gitlab.com/takeshikodo/snl-wallet/paper.pdf) |
-| Wallet   | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet/)         |
-| Token    | Snail token aka "Satoshi Nakamoto Leverage"                      | 
-| Domain   | [slowsnail.eth](https://etherscan.io/address/slowsnail.eth)      |
-| Contract | 0x3f243F1A635b3E55249222dAB9529441f5A2d594                       |
-| Telegram | [t.me/slowsnailprotocol](https://t.me/slowsnailprotocol)         |
-| Twitter  | [twitter.com/t4k3sh1k0d0](https://twitter.com/t4k3sh1k0d0)       |
-| Gitlab   | [snl-wallet](https://gitlab.com/takeshikodo/snl-wallet/)         |
+| Symbol   | SNL                                                                    |
+|----------|------------------------------------------------------------------------|
+| Paper    | [pdf](https://gitlab.com/takeshikodo/snl-wallet/raw/master/paper.pdf?inline=false) |
+| Wallet   | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet/)               |
+| Token    | Snail token aka "Satoshi Nakamoto Leverage"                            |
+| Domain   | [slowsnail.eth](https://etherscan.io/address/slowsnail.eth)            |
+| Contract | 0x3f243F1A635b3E55249222dAB9529441f5A2d594                             |
+| Telegram | [t.me/slowsnailprotocol](https://t.me/slowsnailprotocol)               |
+| Twitter  | [twitter.com/t4k3sh1k0d0](https://twitter.com/t4k3sh1k0d0)             |
+| Gitlab   | [snl-wallet](https://gitlab.com/takeshikodo/snl-wallet/)               |
 
 
 **Important**: always check that you work with the above contract address. It is the *ONLY* way to guarantee that it corresponds to the originally published code on the Ethereum main network (i.e. to guarantee that what you get is neither a result of a malicious phishing attack, some form of scam nor does it contain any deviations in functionality from the original code).
