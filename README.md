@@ -14,11 +14,12 @@ One can use the wallet app to buy, sell or transfer SNL directly via the contrac
 | Symbol   | SNL                                                              |
 |----------|------------------------------------------------------------------|
 | Paper    | [paper.pdf](https://gitlab.com/takeshikodo/snl-wallet/paper.pdf) |
-| Wallet   | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet/)          |
+| Wallet   | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet/)         |
 | Token    | Snail token aka "Satoshi Nakamoto Leverage"                      | 
 | Domain   | [slowsnail.eth](https://etherscan.io/address/slowsnail.eth)      |
 | Contract | 0x3f243F1A635b3E55249222dAB9529441f5A2d594                       |
 | Telegram | [t.me/slowsnailprotocol](https://t.me/slowsnailprotocol)         |
+| Twitter  | [twitter.com/t4k3sh1k0d0](https://twitter.com/t4k3sh1k0d0)       |
 | Gitlab   | [snl-wallet](https://gitlab.com/takeshikodo/snl-wallet/)         |
 
 
