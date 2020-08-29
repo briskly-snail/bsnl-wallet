@@ -12,7 +12,7 @@ Enhanced wallet to trade briskly-snail tokens (a community rewamp of the origina
 | Symbol   | SNL                                                                    |
 |----------|------------------------------------------------------------------------|
 | Token    | Snail token aka "Satoshi Nakamoto Leverage"                            |
-| New Telegram | [t.me/slowsnailprotocol](https://t.me/brisky-snail)               |
+| New Telegram | [t.me/brisklysnail](https://t.me/brisklysnail)               |
 | New Wallet | [Wallet DApp](https://takeshikodo.gitlab.io/snl-wallet/)               |
 | Contract | 0x3f243F1A635b3E55249222dAB9529441f5A2d594                             |
 | Domain   | [slowsnail.eth](https://etherscan.io/address/slowsnail.eth)            |
