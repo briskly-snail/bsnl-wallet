@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/briskly-snail/bsnl-wallet/">
+    <img src="/doc/img/bsnl.png?raw=true" width="200"/>
+  </a>
+</p>
+
 # bsnl-wallet
 
 Enhanced wallet to trade briskly-snail tokens (a community rewamp of the original SNAIL project by Takeshi Kodo).
@@ -32,10 +38,9 @@ We look to:
 
 ## About
 
-Brisky-snail is a continuation of the wallet to work with the SNaiL tokens.   
-Original project has been published [on gitlab](https://gitlab.com/takeshikodo/snl-wallet) in 2019 (before the DeFi becoming massively popular).
+**Brisky-snail** is a further continuation and development of the original wallet to work with the SNaiL tokens. Original project has been published [on gitlab](https://gitlab.com/takeshikodo/snl-wallet) in 2019 (before the topic of DeFi has become massively popular).
 
-We believe this work is applicable in the context of modern DeFi and should be continued. It seems that it has already affected other projects.
+It seems that ideas of Takeshi's work has already affected other projects. We believe his work is applicable in the modern context for DeFi to grow intrinsically and should be continued.
 
 
 ## Quote from the original README
