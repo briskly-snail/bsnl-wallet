@@ -20,6 +20,9 @@ Enhanced wallet to trade briskly-snail tokens (a community rewamp of the origina
 > Important: our enhanced **briskly-snail wallet** works with the same contract at **0x3f243F1A635b3E55249222dAB9529441f5A2d594**
 
 
+> If you want to trade snails on uniswap, you can add the following list (in MANAGE lists of https://app.uniswap.org/):
+https://briskly-snail.github.io/snail.tokenlist.json
+
 ## ROADMAP
 
 Our interpretation is that Takeshi wished to decentralize his work.
