@@ -1,0 +1,23 @@
+{
+  "name": "Snail Token list",
+  "timestamp": "2020-08-31T12:00:00+00:00",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "keywords": [
+    "briskly",
+    "snail",
+    "list"
+  ],
+  "tokens": [
+    {
+      "address": "0x3f243f1a635b3e55249222dab9529441f5a2d594",
+      "chainId": 1,
+      "name": "Takeshi Snail",
+      "symbol": "SNAIL",
+      "decimals": 18
+    }
+  ]
+}
