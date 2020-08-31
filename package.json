@@ -1,6 +1,6 @@
 {
   "name": "snl-wallet",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "snail token wallet",
   "scripts": {
     "test": "truffle migrate --reset && truffle test",

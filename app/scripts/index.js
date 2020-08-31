@@ -18,7 +18,7 @@ import snailTokenArtifact from '../../build/contracts/SnailToken.json'
 import { assert, BNfmt, BNe18, BNparse } from './utils.js'
 
 // Constants
-const version = "0.1.0"
+const version = "0.2.0"
 // Disable for production
 const DEBUG = false 
 // For deposit/withdraw operations
